@@ -1,0 +1,22 @@
+.dotted-bg {
+  // width: 100%;
+  // height: 100%;
+
+  background-position: 0% 0%;
+  background-size: 15px 15px;
+  background-image: radial-gradient( 
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 10%
+  );
+
+  box-shadow: 0 0 4rem 4rem rgba(249, 249, 249);
+
+  &::before {
+    content: "";
+    display: block;
+    top: 0; left: 0;
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, .025);
+  }
+}

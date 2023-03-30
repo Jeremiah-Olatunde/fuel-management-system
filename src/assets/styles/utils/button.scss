@@ -1,0 +1,22 @@
+
+.button, 
+.button-border,
+.button-solid-black, 
+.button-solid-accent,
+.button-solid-accent-dark,
+.button-solid-accent-light
+ {
+  cursor: pointer;
+  font-weight: 900;
+  color: darkgoldenrod;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  border: .5rem solid transparent;
+}
+
+.button-solid-black { color: white; background: black; }
+.button-solid-accent { color: black; background: var(--accent); }
+.button-solid-accent-light { color: black; background: var(--accent-light); }
+.button-solid-accent-dark { color: black; background: var(--accent-dark); }
+
+.button-border { border: .5rem solid black; }

@@ -1,0 +1,22 @@
+.section { 
+  margin-bottom: 10rem; 
+  min-height: 100vh;
+  padding-top: var(--navbar-height);
+}
+
+.section-header {
+  .main-header{
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+  }
+
+  .sub-header {
+    font-weight: 700;
+    font-variant: small-caps;
+    
+    padding: .444em 0;
+    letter-spacing: .0444em;
+    color: darkgoldenrod;
+  }
+}
