@@ -10,14 +10,14 @@
       <div class="service-card card">
         <img class="image" src="@/assets/images/offshore.jpg" alt="">
         <header class="header">
-          <h3 class="main-header">oil <br> services</h3>
+          <h3 class="main-header">home <br> rentals </h3>
         </header>
       </div>
 
       <div class="service-card card">
         <img class="image" src="@/assets/images/excavator.jpg" alt="">
         <header class="header">
-          <h3 class="main-header">civil <br> building</h3>
+          <h3 class="main-header">oilfield <br> services</h3>
         </header>
       </div>    
 
@@ -34,21 +34,21 @@
       <div class="service-card card">
         <img class="image" src="@/assets/images/flat.jpg" alt="">
         <header class="header">
-          <h3 class="main-header">real <br> estate</h3>
+          <h3 class="main-header">engineering </h3>
         </header>
       </div>
 
       <div class="service-card card">
         <img class="image" src="@/assets/images/conceptual.jpg" alt="">
         <header class="header">
-          <h3 class="main-header">home <br> rentals</h3>
+          <h3 class="main-header">procurement </h3>
         </header>
       </div>
 
       <div class="service-card card">
         <img class="image" src="@/assets/images/cranes.jpg" alt="">
         <header class="header">
-          <h3 class="main-header">water <br> works</h3>
+          <h3 class="main-header">capital <br> construction</h3>
         </header>
       </div>
     </div>
@@ -61,7 +61,7 @@
     font-size: 1.15rem; // 1280 x 720 = 1rem;
 
     display: grid;
-    grid-column-gap: 7em;
+    column-gap: 4em;
     grid-template-columns: 1fr 1fr;
     
     .gallery-header { 
@@ -80,7 +80,7 @@
       margin-bottom: 7em;
 
       .header { padding: 2em }
-      .main-header { font-size: 3.5em; }
+      .main-header { font-size: 2.5em; }
       &:last-child { margin-bottom: 0; }
     }
   }

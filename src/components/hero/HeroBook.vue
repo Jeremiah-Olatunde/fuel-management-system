@@ -11,7 +11,7 @@
       <div class="number">01</div>
       <header class="header">
         <h2 class="main-header">
-          book <br> a night <br>in chervron
+          book a <br> night in Namor apartments <br>
         </h2>
         <button 
           class="book-button card-button button-solid-accent-light" 
@@ -37,7 +37,7 @@
 
       .header {
         padding: 3em;
-        .main-header { font-size: 4.5em; }
+        .main-header { font-size: 3.7em; }
         .book-button { font-size: 2em; }
       }
     }

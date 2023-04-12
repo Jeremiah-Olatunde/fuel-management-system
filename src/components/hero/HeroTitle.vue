@@ -2,11 +2,13 @@
 <template>
   <div class="home-title">
     <header class="home-header section-header">
-      <h1 class="main-header">the quick  brown fox </h1>
-      <h2 class="sub-header">lorem ipsum dolor sit amet consectetur.</h2>
+      <h1 class="main-header"> Business that excites </h1>
+      <h2 class="sub-header">Unrivalled quality services in business</h2>
     </header>
     <p class="home-text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero enim amet exercitationem ab eveniet officiis foba de.
+      Namor Technologies limited is a limited liability company, incorporated in Nigeria, that specializes in delivering
+      quality services in Construction, Engineering, Procurement, Equipment rental, Real Estate
+      and Oilfield Services.
     </p>
     <a href="#contact-section">
       <button class="home-button button-solid-black">reach out</button>

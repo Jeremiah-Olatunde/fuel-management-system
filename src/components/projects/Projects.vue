@@ -9,7 +9,7 @@
           <img class="image" src="@/assets/images/crane.jpg" alt="">
           <div class="number number-focus">01</div>
           <header class="project-header header">
-            <h3 class="main-header">crane <br> building</h3>
+            <h3 class="main-header">Home <br> rentals</h3>
           </header>
         </div>    
 
@@ -17,7 +17,7 @@
           <img class="image" src="@/assets/images/burj.jpg" alt="">
           <div class="number">02</div>
           <header class="project-header header">
-            <h3 class="main-header">burj <br> khalifa</h3>
+            <h3 class="main-header">procurement </h3>
           </header>
         </div>    
 
@@ -25,7 +25,7 @@
           <img class="image" src="@/assets/images/offshore.jpg" alt="">
           <div class="number">03</div>
           <header class="project-header header">
-            <h3 class="main-header">lagos <br> oil well</h3>
+            <h3 class="main-header">oilfield <br> services</h3>
           </header>
         </div>       
       </div>
@@ -64,7 +64,7 @@
 
       display: grid;
       place-items: center;
-      grid-column-gap: 6em;
+      column-gap: 4em;
       grid-template-rows: 100%;
       grid-template-columns: repeat(3, 1fr);
 
@@ -75,7 +75,7 @@
 
         .project-header {
           padding: 3em;
-          .main-header { font-size: 4em; }
+          .main-header { font-size: 3.1em; }
         }
       }
     }

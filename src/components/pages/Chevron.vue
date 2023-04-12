@@ -27,18 +27,19 @@
     </template>
 
     <template #data-icon-0><CalendarIcon/></template>
-    <template #data-label-0>july 27 2001</template>  
+    <template #data-label-0>february 25, 2023</template>  
 
     <template #data-icon-1><MagnifyIcon/></template>
-    <template #data-label-1>namor tech rentals</template>  
+    <template #data-label-1>namor home and apartment rentals</template>  
 
     <template #data-icon-2><LocationIcon/></template>
-    <template #data-label-2>chevron drive lekki, lagos</template>  
+    <template #data-label-2>house 30, chevron alternative route, <br>off chevron drive lekki, lagos</template>  
 
-    <template #main-header>chevron <br> hotel and inn</template> 
-    <template #sub-header>Lorem, ipsum dolor sit amet, consectetur.</template> 
+    <template #main-header>Namor <br> home and apartments</template> 
+    <template #sub-header>top quality home and apartments</template> 
     <template #text>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit eius saepe, explicabo libero modi necessitatibus, magni et enim odit esse, ad quod nihil odio id! Temporibus laborum qui atque, vel? Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Nihil incidunt voluptates modi doloribus eum.
+      Namor home and apartments is a highly sophisticated, state-of-the-art home and apartment situated at Chevron alternative route in Lekki, Lagos.
+      Its modern facilities, 24/7 power supply, high security and serene environment make your stay very convenient. 
     </template>
 
     <template #more-button>book a stay now!</template>

@@ -1,6 +1,24 @@
+<script lang="ts">
+  import { defineComponent } from 'vue';
+  import emailjs from "@emailjs/browser";
+
+  export default defineComponent({
+    methods: {
+      sendEmail() {
+        emailjs.sendForm('contact_service', 'contact_form_namor', this.$refs.form as HTMLFormElement, 'AZZHVmu8BUnFltQfO')
+          .then((result) => {
+            alert('Success! Your message has been received by Namor Technologies');
+          }, (error) => {
+            alert('FAILED...');
+          })
+      }
+    }
+  })
+</script>
+
 <template>
   <div class="contact-form dotted-bg">
-    <form action="" class="form">
+    <form ref="form" @submit.prevent="sendEmail" action="" class="form">
       <header class="form-header section-header">
         <div class="main-header">contact</div>
       </header>
