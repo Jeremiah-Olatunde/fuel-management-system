@@ -56,7 +56,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 60% 40%;
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
   }
 
   .gallery {

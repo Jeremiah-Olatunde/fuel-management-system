@@ -58,7 +58,7 @@
 
 <style lang="scss" scoped>
   .info-page {
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
 
     padding: 7em;
     background: white;

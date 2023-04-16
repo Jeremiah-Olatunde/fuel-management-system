@@ -10,7 +10,7 @@
 
 <style lang="scss" scoped>
   .services-title {
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
     padding-left: 5em;
 
     position: sticky;

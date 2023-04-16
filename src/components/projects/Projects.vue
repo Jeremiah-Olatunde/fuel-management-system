@@ -34,7 +34,7 @@
 
 <style lang="scss" scoped>
   .projects-section {
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
 
     display: flex;
     height: 100vh;

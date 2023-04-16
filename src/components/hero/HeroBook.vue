@@ -5,14 +5,14 @@
 </script>
 
 <template>
-  <aside class="home-book">
+  <aside class="hero-book">
     <div class="book-card card">
       <img class="image" src="@/assets/images/cozy.jpg" alt="">
       <div class="number">01</div>
       <header class="header">
-        <h2 class="main-header">
-          book a <br> night in Namor apartments <br>
-        </h2>
+        <h4 class="main-header">
+          book <br> a night <br>in chervron
+        </h4>
         <button 
           class="book-button card-button button-solid-accent-light" 
           @click="$emit('open', 'chevron')"
@@ -25,10 +25,10 @@
 </template>
 
 <style lang="scss" scoped>
-  .home-book { 
+  .hero-book { 
     display: grid;
     align-items: center;
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
 
     .book-card {
       width: 80%; height: 85%;

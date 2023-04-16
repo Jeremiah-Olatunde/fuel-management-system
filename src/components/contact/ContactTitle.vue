@@ -1,4 +1,3 @@
-
 <template>
   <div class="contact-title">
       <div class="contact-content">
@@ -15,7 +14,7 @@
     display: grid;
     place-items: center;
 
-    font-size: 1.15rem; // 1280 x 720 = 1rem;
+    font-size: 1rem; // 1280 x 720 = 1rem;
 
     .contact-header {
       .main-header{ font-size: 9em; }

@@ -6,6 +6,7 @@
     props: { activeSection: { type: String, required: true } },
     mounted: function() {
       scroll(animate("#progress", { width: ["0", "100%"] }));
+      initializeSlotScreen(".nav-list");
     }
   }  
 </script>
@@ -84,17 +85,16 @@
     .nav-list { 
       height: 100%; 
       display: flex; 
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
     }
 
     .active, .nav-item:hover > .nav-link { color: var(--accent); }
 
     .nav-item {
+      padding: 1rem 0; 
+      // padding: 0 4rem;
       cursor: pointer;
-      padding: 0 4rem;
-      &:last-child { padding-right: 0; }
-
 
 
       .nav-link {
@@ -108,6 +108,14 @@
         place-items: center;
       }
 
+    }
+  }
+
+  @media screen and (min-width: 600px){
+    .navbar {
+      .nav-list { height: 100%; flex-direction: row; }
+      .nav-item { padding: 0 4rem; }
+      .nav-item:last-child { padding-right: 0; }
     }
   }
 </style>

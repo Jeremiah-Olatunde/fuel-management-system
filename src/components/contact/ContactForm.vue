@@ -38,8 +38,14 @@
       display: grid;
       place-items: center;
 
-      font-size: 1.15rem; // 1280 x 720 = 1rem;
+      font-size: 1rem; // 1280 x 720 = 1rem;
 
+
+      .dotted {
+        background: rgb(249, 249, 249);
+        box-shadow: 0 0 2rem 2rem rgba(249, 249, 249);
+      }
+    
       .form {
         padding: 2em;
         width: min-content;
