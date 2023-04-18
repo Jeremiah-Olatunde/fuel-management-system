@@ -40,8 +40,6 @@
     padding: 8rem 2rem 2rem 2rem;
     display: grid;
     grid-template-rows: min-content auto;
-    // background: darkgoldenrod;
-    // font-size: .9rem;
 
     .hero-title {
       padding: 5rem 0;

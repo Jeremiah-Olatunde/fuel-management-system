@@ -53,23 +53,13 @@
     .mobile-services {
       padding: 8rem 2rem;
       margin-bottom: 0;
-      // box-shadow: 0 0 10px 0 black;
-      // border: 5px solid black;
-      // border-left: 0; border-right: 0;
     }
 
     .gallery-header { 
-      // border-left: 10px solid rgba(184, 134, 11, 0.25);
-      // padding: 1rem 0 1rem 1rem;
       margin-bottom: 4em;
 
       .main-header { 
         font-size: 4em;
-        // font-size: 9em;
-        // font-weight: 900; 
-        // letter-spacing: -.5rem;
-        // color: rgba(184, 134, 11, 0.25);
-
       }
       .sub-header { font-size: 2em; }
       .dash { 
@@ -119,7 +109,6 @@
         font-variant: small-caps;
         text-transform: capitalize;
 
-        // padding-left: 2rem;
         letter-spacing: -.1rem;
       }
     }

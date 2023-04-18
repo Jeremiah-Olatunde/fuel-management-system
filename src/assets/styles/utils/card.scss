@@ -12,11 +12,12 @@
     top: 0; right: 0;
     position: absolute;
 
-    font-weight: 800;
-    color: white;
+    &::before {
+      display: block;
+      font-weight: 800;
+      color: white;
+    }
   }  
-
-  .number-focus { color: var(--accent-light); }
 
   .header {
     position: absolute;

@@ -2,23 +2,26 @@
   <div class="contact-title">
       <div class="contact-content">
         <header class="contact-header section-header">
-          <h1 class="main-header">don't <br> hesitate. <br>reach out!</h1>
-          <h2 class="sub-header">we are always eager to talk to new clients</h2>
+          <h3 class="main-header">don't <br> hesitate. <br>reach out!</h3>
+          <h4 class="sub-header">we are always eager to talk to new clients</h4>
         </header>
       </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .contact-title {
-    display: grid;
-    place-items: center;
 
-    font-size: 1rem; // 1280 x 720 = 1rem;
+  .contact-title { display: none; }
 
-    .contact-header {
-      .main-header{ font-size: 9em; }
-      .sub-header { font-size: 2.25em; }
+  @media screen and (min-width: 700px) {
+    .contact-title {
+      display: grid;
+      place-items: center;
+
+      .contact-header {
+        .main-header{ font-size: 10em; }
+        .sub-header { font-size: 2.25em; }
+      }
     }
   }
 </style>

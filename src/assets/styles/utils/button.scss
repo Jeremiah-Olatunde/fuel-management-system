@@ -20,3 +20,16 @@
 .button-solid-accent-dark { color: black; background: var(--accent-dark); }
 
 .button-border { border: .5rem solid black; }
+
+
+.dash-button {
+  font-weight: 800;
+  font-variant: small-caps; 
+
+  &::before {
+    display: inline-block;
+    content: "---------";
+    letter-spacing: -.15em;
+    margin-right: .5em;
+  }
+}

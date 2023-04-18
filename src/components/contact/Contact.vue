@@ -16,8 +16,23 @@
 </template>
 
 <style lang="scss" scoped>
+
   .contact-section {
+    font-size: 1rem;
     display: grid;
-    grid-template-columns: 60% 40%;
+  }
+
+  @media screen and (min-width: 700px) {
+    .contact-section {
+      grid-template-columns: .6fr .4fr;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .contact-section { font-size: 1.15rem; }
+  }
+  
+  @media screen and (min-width: 1700px) {
+    .contact-section { font-size: 1.35rem; }
   }
 </style>

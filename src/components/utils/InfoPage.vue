@@ -1,8 +1,9 @@
 <script lang="ts">
   import XIcon from "@/components/icons/XIcon.vue";
+  import LeftArrowIcon from "@/components/icons/LeftArrowIcon.vue";
 
   export default {
-    components: { XIcon },
+    components: { LeftArrowIcon, XIcon },
     emits: ["close"]
   }
 </script>
@@ -12,7 +13,13 @@
     <slot name="info-media"></slot>
 
     <div class="info-content">
-      <div style="text-align: right;">
+      <div class="close-arrow">
+        <button class="close-button" @click="$emit('close')">
+          <LeftArrowIcon class="arrow icon"/>
+        </button>
+      </div>
+
+      <div class="close-x">
         <button class="close-button" @click="$emit('close')">
           <XIcon class="icon"/>
         </button>
@@ -51,17 +58,15 @@
           <slot name="more-button"></slot>
         </button>
       </div>
-
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
   .info-page {
-    font-size: 1rem; // 1280 x 720 = 1rem;
+    font-size: .825rem;
 
-    padding: 7em;
-    background: white;
+    padding: 5em 2em;
 
     width: 100vw;
     height: 100vh;
@@ -71,10 +76,15 @@
     position: absolute;
 
     display: grid;
-    grid-column-gap: 7em;
-    grid-template-columns: 4.5fr 5.5fr;
+    grid-row-gap: 4em;
+    grid-template-rows: auto min-content;
 
-    .close-button .icon { width: 2.5em; height: 2.5em; }
+    .close-button .icon { width: 3.5em; aspect-ratio: 1; }
+
+    .close-arrow { display: block; }
+    .close-x { display: none; text-align: right; }
+
+    .data-list { display: none; }
 
     .more-button {
       font-size: 2em;
@@ -88,39 +98,54 @@
     }
 
     .info-header {
-      padding: 5em 0 1em 0;
+      padding: 3em 0 1em 0;
       .main-header { font-size: 5em; } 
       .sub-header { font-size: 2em; }
     }
 
     .info-text { font-size: 1.5em; }
+  }
 
-    .data-list {
-      .data-item {
-        display: grid;
-        grid-gap: 1em;
-        grid-template-columns: repeat(3, min-content);
-        
-        margin-bottom: 1em;
-        align-items: center;
-      }
+  @media screen and (min-width: 700px) {
+    .info-page {
+      font-size: 1rem;
+      padding: 7em;
 
-      .dash { letter-spacing: 0; color: var(--accent-light); }      
+      grid-row-gap: 0;
+      grid-column-gap: 7em;
+      grid-template-rows: auto;
+      grid-template-columns: 4.5fr 5.5fr;
 
-      .icon:deep(svg){
-        height: 1.5em;
-        aspect-ratio: 1;
-        fill: var(--accent-light);
-      }
+      .close-arrow { display: none; }
+      .close-x { display: block; }
+      .data-list {
+        display: block;
 
-      .label {
-        font-weight: 600;
-        font-size: 1.5em;
-        font-variant: small-caps; 
+        .data-item {
+          display: flex;
+          grid-gap: 1em;
+          
+          margin-bottom: 1em;
+          align-items: center;
+        }
 
-        white-space: nowrap;   
-        letter-spacing: .2em;
-        color: rgba(0, 0, 0, .5);
+        .dash { letter-spacing: 0; color: var(--accent-light); }      
+
+        .icon:deep(svg){
+          height: 1.5em;
+          aspect-ratio: 1;
+          fill: var(--accent-light);
+        }
+
+        .label {
+          font-weight: 600;
+          font-size: 1.5em;
+          font-variant: small-caps; 
+
+          // white-space: nowrap;   
+          letter-spacing: .2em;
+          color: rgba(0, 0, 0, .5);
+        }
       }
     }
   }

@@ -76,5 +76,5 @@
       &:hover .label { color: var(--accent-light); }
     }
   }
-  
+
 </style>

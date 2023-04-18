@@ -4,40 +4,19 @@
 
 <template>
   <section class="gallery-section">
-    <div class="gallery dotted-bg">
-      <div class="card">
-        <img src="@/assets/images/flatfront.jpg" alt="" class="image">
+    <div class="gallery dotted-bg" style="grid-area: gallery;">
+      <div class="card" v-for="n in 15">
+        <img 
+          :src="`/src/assets/images/chevron/ (${n}).jpg`" alt=""
+          class="image"
+        >
       </div>
-
-      <div class="card">
-        <img src="@/assets/images/flat.jpg" alt="" class="image">
-      </div>
-
-      <div class="card">
-        <img src="@/assets/images/sitting.jpg" alt="" class="image">
-      </div>
-
-      <div class="card">
-        <img src="@/assets/images/living.jpg" alt="" class="image">
-      </div>
-
-      <div class="card">
-        <img src="@/assets/images/chair.jpg" alt="" class="image">
-      </div>
-
-      <div class="card">
-        <img src="@/assets/images/cooking.jpg" alt="" class="image">
-      </div>  
-
-      <div class="card">
-        <img src="@/assets/images/sleep.jpg" alt="" class="image">
-      </div>      
     </div>
 
-    <div class="gallery-title">
+    <div class="gallery-title" style="grid-area: title;">
       <header class="gallery-header section-header">
         <h2 class="main-header">
-          take  <br> a  look
+          take  <br class="br"> a  look
         </h2>
         <h3 class="sub-header">have a night you will never forget</h3>
         <button class="more-button" @click="$emit('close')">
@@ -45,7 +24,6 @@
           close gallery
         </button>
       </header>
-
     </div>
   </section>
 </template>
@@ -53,57 +31,84 @@
 <style lang="scss" scoped>
 
   .gallery-section {
-    height: 100vh;
     display: grid;
-    grid-template-columns: 60% 40%;
-    font-size: 1rem; // 1280 x 720 = 1rem;
+    font-size: 1rem;
+    // grid-template-columns: .6fr .4fr;
+    grid-template-rows: min-content auto;
+    grid-template-areas: "title" "gallery";
   }
 
   .gallery {
-    height: 100vh;
-    padding: 5em;
+    padding: 3em;
+    display: flex;
+    flex-wrap: wrap;
 
-    display: grid;
-    grid-gap: 3em;
-    grid-template-rows: repeat(6, calc((100% - 15em) / 6));
-    grid-template-columns: repeat(8, calc((100% - 21em) / 8));
+    justify-content: center;
 
-    .image {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);      
+    .card {
+      width: 100%;
+      aspect-ratio: 1 / 1.5;
+      margin: 1.5em 0 ;
+
+      .image {
+        opacity: 1;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);      
+      }
     }
 
     .card:hover .image { opacity: 1; width: 110%; height: 110%; }
-    .card:nth-child(1) { grid-area: 1 / 1 / span 4 / span 3; }
-    .card:nth-child(2) { grid-area: 1 / 4 / span 2 / span 3; }
-    .card:nth-child(3) { grid-area: 5 / 1 / span 2 / span 2; }
-    .card:nth-child(4) { grid-area: 5 / 3 / span 2 / span 3; }
-    .card:nth-child(5) { grid-area: 3 / 4 / span 2 / span 2; }
-    .card:nth-child(6) { grid-area: 3 / 6 / span 4 / span 3; }
-    .card:nth-child(7) { grid-area: 1 / 7 / span 2 / span 2; }
-    .card:nth-child(8) { grid-area: 1 / 9 / span 2 / span 3; }
-    .card:nth-child(9) { grid-area: 3 / 8 / span 2 / span 4; }
+
   }
 
   .gallery-title {
     display: grid;
     align-items: center;
-    padding-left: 2.5em;
+
+    padding: 3em;
+
   
     .gallery-header {
-
-      .main-header { font-size: 9em; }
-      .sub-header { font-size: 2.25em; }
+      .main-header { font-size: 6em; }
+      .sub-header { font-size: 2em; }
       .more-button {
         font-size: 2em;
         font-weight: 800;
         font-variant: small-caps;   
+        text-align: left;
 
         padding-top: .5em;
         letter-spacing: .1em;
 
         .dash { letter-spacing: 0; margin-right: .5em; }
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+
+    .gallery-section {
+      display: grid;
+      font-size: 1rem;
+      grid-template-columns: .6fr .4fr;
+      grid-template-areas: "gallery title";
+    }
+
+    .gallery-title {
+      padding-left: 2.5em;
+      height: 100vh;
+
+      top: 0;
+      position: sticky;
+    }
+
+    .gallery {
+
+      .card {
+        margin: 1em;
+        width: 30%;
+        min-width: 100px;
       }
     }
   }

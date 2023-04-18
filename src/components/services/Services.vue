@@ -18,6 +18,19 @@
 <style lang="scss" scoped>
   .services-section {
     display: grid;
-    grid-template-columns: 50% 50%;
+    margin-bottom: 0;
+  }
+
+
+  @media screen and (min-width: 700px) {
+    .services-section { grid-template-columns: .5fr .5fr; }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .services-section { font-size: 1.15rem; }
+  }
+  
+  @media screen and (min-width: 1700px) {
+    .services-section { font-size: 1.35rem; }
   }
 </style>
