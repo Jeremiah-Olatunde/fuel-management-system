@@ -7,7 +7,7 @@
 <template>
   <aside class="home-book">
     <div class="book-card card">
-      <img class="image" src="@/assets/images/chevron/exterior.jpg" alt="image of chevron home exterior">
+      <img class="image" src="@/assets/images/chevron/(2).jpg" alt="image of chevron home exterior">
       <div class="number"></div>
       <header class="header">
         <h2 class="main-header">book<br>a stay in<br> chevron</h2>
@@ -28,13 +28,19 @@
 <style lang="scss" scoped>
 
   .home-book {
-    padding: 0 0 2em 2em;
+    .card .image {
+      opacity: 0.7;
+    }
+    padding: 0 2em 2em;
 
     display: grid;
-    grid-column-gap: 3em;
-    grid-template-columns: .8fr .2fr;
+    // grid-column-gap: 3em;
+    grid-template-rows: .95fr .15fr;
+    grid-template-areas: "namor"
+                          "button";
 
     .book-card {
+      grid-area: namor;
       border: 5px solid black;
       box-shadow: 0 0 1em black;
 
@@ -46,11 +52,12 @@
     }
 
     .works-wrapper {
+      grid-area: button;
       display: grid;
       place-items: center;
 
       writing-mode: vertical-lr;
-      transform: rotate(180deg);
+      // transform: rotate(180deg);
 
       background: var(--accent-dark);  
       border: .5rem solid black;

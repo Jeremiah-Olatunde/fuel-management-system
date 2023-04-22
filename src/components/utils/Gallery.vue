@@ -5,23 +5,19 @@
 <template>
   <section class="gallery-section">
     <div class="gallery dotted-bg" style="grid-area: gallery;">
-      <div class="card" v-for="n in 15">
-        <img 
-          :src="`/src/assets/images/chevron/ (${n}).jpg`" alt=""
-          class="image"
-        >
-      </div>
+      <slot></slot>
     </div>
 
     <div class="gallery-title" style="grid-area: title;">
       <header class="gallery-header section-header">
+        <!-- <slot name="header"></slot> -->
         <h2 class="main-header">
-          take  <br class="br"> a  look
+          <slot name="data-head-0"></slot><br class="br"><slot name="data-head-1"></slot>
         </h2>
-        <h3 class="sub-header">have a night you will never forget</h3>
+        <h3 class="sub-header"><slot name="sub-head-0"></slot></h3>
         <button class="more-button" @click="$emit('close')">
           <span class="dash">&mdash;&mdash;</span>
-          close gallery
+          <slot name="close-icon"></slot>
         </button>
       </header>
     </div>
@@ -45,20 +41,20 @@
 
     justify-content: center;
 
-    .card {
-      width: 100%;
-      aspect-ratio: 1 / 1.5;
-      margin: 1.5em 0 ;
+    // .card {
+    //   width: 100%;
+    //   aspect-ratio: 1 / 1.5;
+    //   margin: 1.5em 0 ;
 
-      .image {
-        opacity: 1;
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);      
-      }
-    }
+    //   .image {
+    //     opacity: 1;
+    //     position: absolute;
+    //     top: 50%; left: 50%;
+    //     transform: translate(-50%, -50%);      
+    //   }
+    // }
 
-    .card:hover .image { opacity: 1; width: 110%; height: 110%; }
+    // .card:hover .image { opacity: 1; width: 110%; height: 110%; }
 
   }
 
@@ -103,14 +99,14 @@
       position: sticky;
     }
 
-    .gallery {
+    // .gallery {
 
-      .card {
-        margin: 1em;
-        width: 30%;
-        min-width: 100px;
-      }
-    }
+    //   .card {
+    //     margin: 1em;
+    //     width: 30%;
+    //     min-width: 100px;
+    //   }
+    // }
   }
 
 </style>

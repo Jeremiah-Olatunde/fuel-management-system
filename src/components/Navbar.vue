@@ -4,6 +4,7 @@
 
   export default {
     props: { activeSection: { type: String, required: true } },
+
     mounted: function() {
       scroll(animate("#progress", { width: ["0", "100%"] }));
       if(document.documentElement.clientWidth < 700)
@@ -20,7 +21,8 @@
         <span class="dot">.</span>
       </h2>
 
-      <ul class="nav-list">
+      <div class="nav-container">
+        <ul class="nav-list">
         <li :class="`nav-item ${activeSection == 'home' ? 'active' : ''}`">
           <a class="nav-link" href="#home-section" >home</a>
         </li>
@@ -33,7 +35,11 @@
         <li :class="`nav-item ${activeSection == 'contact' ? 'active' : ''}`">
           <a class="nav-link" href="#contact-section" >contact</a>
         </li>
+        <!-- <li :class="`nav-item ${activeSection == 'contact' ? 'active' : ''}`">
+          <a class="nav-link" href="#footer-section" >contact</a>
+        </li> -->
       </ul>
+      </div>
 
       <div class="progress" id="progress"></div>
     </nav>
@@ -47,7 +53,7 @@
 
     width: 100%;
     height: var(--navbar-height);
-    padding: 0 2em;
+    padding: 2em;
 
     z-index: 2;
     top: 0; left: 0;
@@ -76,11 +82,15 @@
       .dot { position: absolute; color: var(--accent);  }
     }
 
-    .nav-list { 
-      height: 100%; 
-      display: flex; 
-      flex-direction: column;
-      align-items: center;
+    .nav-container {
+      // flex-basis: 100%; 
+      overflow: hidden;
+      .nav-list { 
+        height: 100%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .active, .nav-item:hover > .nav-link { color: var(--accent); }
@@ -104,12 +114,12 @@
     }
   }
 
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 900px){
     .navbar {
       padding: 0 8em;
       .logo .tech { display: inline-block; }
-      .nav-list { height: 100%; flex-direction: row; }
-      .nav-item { padding: 0 4rem; }
+      .nav-container .nav-list { height: 100%; flex-direction: row; }
+      .nav-item { padding: 0 2rem; }
       .nav-item:last-child { padding-right: 0; }
     }
   }

@@ -11,7 +11,7 @@
     <section class="home-section section" id="home-section" ref="home">
       <HomeTitle/>
       <HomeBook @open="$emit('open', 'chevron')"/>
-    </section>  
+    </section> 
 </template>
 
 <style lang="scss" scoped>

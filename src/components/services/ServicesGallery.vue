@@ -17,14 +17,14 @@
       </header>
 
       <figure class="service-card card">
-        <img class="image" src="@/assets/images/offshore.jpg" alt="">
+        <img class="image" src="@/assets/images/chevron/facade.jpg" alt="">
         <figcaption class="header">
           <h4 class="main-header">home <br> rentals </h4>
         </figcaption>
       </figure>
 
       <figure class="service-card card">
-        <img class="image" src="@/assets/images/excavator.jpg" alt="">
+        <img class="image" src="@/assets/images/oilfield.jpg" alt="">
         <figcaption class="header">
           <h4 class="main-header">oilfield <br> services</h4>
         </figcaption>
@@ -47,14 +47,14 @@
       </figure>
 
       <figure class="service-card card">
-        <img class="image" src="@/assets/images/conceptual.jpg" alt="">
+        <img class="image" src="@/assets/images/procurement/(1).jpeg" alt="">
         <figcaption class="header">
           <h4 class="main-header">material <br> procurement </h4>
         </figcaption>
       </figure>
 
       <figure class="service-card card">
-        <img class="image" src="@/assets/images/cranes.jpg" alt="">
+        <img class="image" src="@/assets/images/construction.jpg" alt="">
         <figcaption class="header">
           <h4 class="main-header">capital <br> construction</h4>
         </figcaption>
@@ -70,35 +70,35 @@
 
     <div class="service-card">
       <div class="number">01</div>
-      <div class="content">real estate</div>
+      <div class="content">home Rentals</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
     <div class="service-card">
       <div class="number">02</div>
-      <div class="content">consultancy</div>
+      <div class="content">oilfield services</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
     <div class="service-card">
       <div class="number">03</div>
-      <div class="content">procurement</div>
+      <div class="content">capital construction</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
     <div class="service-card">
       <div class="number">04</div>
-      <div class="content">capital construction</div>
+      <div class="content">procurement</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
 
     </div>
     <div class="service-card">
       <div class="number">05</div>
-      <div class="content">oil field services</div>
+      <div class="content">consultancy</div>
         <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
-    <div class="service-card">
+    <!-- <div class="service-card">
       <div class="number">06</div>
       <div class="content">ancillary services</div>
         <RightArrowIcon class="icon"></RightArrowIcon>
-    </div>
+    </div> -->
   </div>
 
 </template>

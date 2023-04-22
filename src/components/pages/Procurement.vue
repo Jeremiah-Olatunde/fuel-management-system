@@ -17,8 +17,8 @@
 <template>
   <InfoPage>
     <template #info-media>
-      <div class="chevron-card card" @click="$emit('open', 'gallery1')">
-        <img class="image" src="@/assets/images/chevron/facade.jpg" alt="">
+      <div class="chevron-card card" @click="$emit('open', 'gallery4')">
+        <img class="image" src="@/assets/images/worker.jpg" alt="">
         <div class="open-gallery">
           <ImageIcon class="icon"/>
           <div class="label main-header">gallery</div>
@@ -27,26 +27,24 @@
     </template>
 
     <template #data-icon-0><CalendarIcon/></template>
-    <template #data-label-0>february 25, 2023</template>  
+    <template #data-label-0>Since 2010</template>  
 
     <template #data-icon-1><MagnifyIcon/></template>
-    <template #data-label-1>namor home and apartment rentals</template>  
+    <template #data-label-1>engineering procurement</template>  
 
     <template #data-icon-2><LocationIcon/></template>
-    <template #data-label-2>house 30, chevron alternative route, <br>off chevron drive lekki, lagos</template>  
+    <template #data-label-2>delta state</template>  
 
-    <template #main-header>Namor <br> home and apartments</template> 
-    <template #sub-header>top quality home and apartments</template> 
+    <template #main-header>Namor <br> Procurement</template> 
+    <template #sub-header>Quality Procurement services</template> 
     <template #text>
-      Namor home and apartments is a highly sophisticated, state-of-the-art home and apartment situated at Chevron alternative route in Lekki, Lagos.
-      Its modern facilities, 24/7 power supply, high security and serene environment make your stay very convenient. 
+      The procurement services offered at namor technologies involves the design,
+      procurement and construction of a company often in the industrial or infrastructure
+      sectors. The procurement aspect usually involves procuring equipment, materials and services
+      for the project, often through tendering and negotiation with suppliers. 
     </template>
 
-    <template #more-button>
-      <a href="tel:+2348034056935">
-        <span class="book">book a stay now!</span>
-      </a>
-    </template>
+    <!-- <template #more-button>book a stay now!</template> -->
 
   </InfoPage>
 </template>
@@ -78,19 +76,6 @@
       }
 
       &:hover .label { color: var(--accent-light); }
-    }
-  }
-
-  .book {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 2px solid var(--accent-light);
-    transition: background-color .25s;
-
-    &:hover {
-      background-color: var(--accent-light);
-      color: #fff;
-      font-weight: 600;
     }
   }
 

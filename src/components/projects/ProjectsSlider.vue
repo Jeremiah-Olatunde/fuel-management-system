@@ -33,60 +33,63 @@
       });
 
 
-    }
+    },
+
+    emits: ['open']
   }
 </script>
 
 <template>
   <div class="projects-slider" id="projects-slider">
     <div class="swiper-wrapper projects-wrapper">
-      <figure class="swiper-slide project-slide card active">
-        <img class="image" src="@/assets/images/chevron/living_1.jpg" alt="">
+      <figure class="swiper-slide project-slide card active" @click="$emit('open', 'chevron')">
+        <img class="image" src="@/assets/images/chevron/facade.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
           <h3 class="main-header">home <br> rentals</h3>
         </figcaption>
       </figure>    
 
-      <figure class="swiper-slide project-slide card">
-        <img class="image" src="@/assets/images/offshore.jpg" alt="">
+      <figure class="swiper-slide project-slide card" @click="$emit('open', 'oilfield')">
+        <img class="image" src="@/assets/images/oilfield.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
           <h3 class="main-header">oilfield <br> services</h3>
         </figcaption>
       </figure>  
 
-      <figure class="swiper-slide project-slide card">
-        <img class="image" src="@/assets/images/burj.jpg" alt="">
+      <figure class="swiper-slide project-slide card" @click="$emit('open', 'construction')">
+        <img class="image" src="@/assets/images/construction.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
           <h3 class="main-header">capital <br> construction</h3>
         </figcaption>
       </figure> 
 
-      <figure class="swiper-slide project-slide card">
-        <img class="image" src="@/assets/images/flat.jpg" alt="">
+      <figure class="swiper-slide project-slide card" @click="$emit('open', 'procurement')">
+        <img class="image" src="@/assets/images/worker.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
-          <h3 class="main-header">home <br> rentals</h3>
+          <h3 class="main-header">procurement <br></h3>
         </figcaption>
       </figure>   
 
       <figure class="swiper-slide project-slide card">
-        <img class="image" src="@/assets/images/cozy.jpg" alt="">
+        <img class="image" src="@/assets/images/consultancy.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
-          <h3 class="main-header">foo <br> bar</h3>
+          <h3 class="main-header">consultancy <br> </h3>
         </figcaption>
       </figure>   
 
-      <figure class="swiper-slide project-slide card">
+
+      <!-- <figure class="swiper-slide project-slide card">
         <img class="image" src="@/assets/images/sitting.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
           <h3 class="main-header">lorem <br> ipsum</h3>
         </figcaption>
-      </figure>                      
+      </figure>                       -->
     </div>
   </div>
 

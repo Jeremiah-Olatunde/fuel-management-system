@@ -9,8 +9,8 @@
 
 <template>
     <section class="projects-section section" id="projects-section">
-      <ProjectsTitle></ProjectsTitle>
-      <ProjectsSlider></ProjectsSlider>
+      <ProjectsTitle/>
+      <ProjectsSlider @open="(pageName) => $emit('open', pageName)"/>
     </section>
 </template>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 
-  import RightArrow from "@/components/icons/RightArrow.vue";
-  import LeftArrow from "@/components/icons/LeftArrow.vue";
+  import RightArrow from "@/components/icons/RightArrowIcon.vue";
+  import LeftArrow from "@/components/icons/LeftArrowIcon.vue";
 
   export default {
     components: { RightArrow, LeftArrow }
