@@ -48,7 +48,6 @@
             scroll(
               ({y: { progress: p }}) => {
               if(0 < p && p < 1) {
-                console.log("Siuuu");
                 this.activeSection = section.getAttribute("id")!.split("-")[0];
               }
             },

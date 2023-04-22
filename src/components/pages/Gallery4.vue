@@ -19,7 +19,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/procurement/(1).jpeg" alt=""
+          src="@/assets/images/procurement/(1).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">

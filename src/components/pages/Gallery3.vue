@@ -19,7 +19,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(1).jpeg" alt=""
+          src="@/assets/images/construction/(1).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -35,7 +35,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(2).jpeg" alt=""
+          src="@/assets/images/construction/(2).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -51,7 +51,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(3).jpeg" alt=""
+          src="@/assets/images/construction/(3).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -67,7 +67,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(4).jpeg" alt=""
+          src="@/assets/images/construction/(4).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -83,7 +83,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(5).jpeg" alt=""
+          src="@/assets/images/construction/(5).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -99,7 +99,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/construction/(6).jpeg" alt=""
+          src="@/assets/images/construction/(6).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">

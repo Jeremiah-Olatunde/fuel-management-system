@@ -19,7 +19,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(6).jpeg" alt=""
+          src="@/assets/images/oilfield/(6).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -35,7 +35,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(2).jpeg" alt=""
+          src="@/assets/images/oilfield/(2).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -51,7 +51,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(3).jpeg" alt=""
+          src="@/assets/images/oilfield/(3).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -67,7 +67,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(4).jpeg" alt=""
+          src="@/assets/images/oilfield/(4).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -83,7 +83,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(5).jpeg" alt=""
+          src="@/assets/images/oilfield/(5).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -99,7 +99,7 @@
     <div class="project-card">
       <figure>
         <img 
-          src="src/assets/images/oilfield/(1).jpeg" alt=""
+          src="@/assets/images/oilfield/(1).jpeg" alt=""
           class="image"
         >
         <figcaption class="image-desc">
@@ -182,11 +182,6 @@
       margin: 1em;
       width: 30%;
       min-width: 100px;
-
-      .image {
-        // top: 50%; left: 50%;
-        // transform: translate(-50%, -50%);
-      }
     }    
   }
 </style>
