@@ -57,14 +57,14 @@
   <div class="footer-section-2">
     <a href="tel:+2348034056935" class="link-one">
       <div class="infobox">
-        <h3 class="title">Lekki Phase II.</h3>
+        <h3 class="title">House 30, Chevron Alternative Route, Off Chevron Drive, Lekki Phase II, Lagos.</h3>
         <p>+2348034056935</p>
       </div>
     </a>
 
     <a href="tel:+2348034056935" class="link-two">
       <div class="infobox">
-        <h3 class="title">Port-Harcourt</h3>
+        <h3 class="title">No. 8, Wilfred Okene Street, Rumunduru, Port-Harcourt, Rivers State.</h3>
         <p>+2348052763144</p>
       </div>
     </a>
@@ -84,7 +84,6 @@
   .footer-section-1 {
     background-color: #1b1b1b;
     display: grid;
-    // justify-content: space-around;
     padding: 9em 3em;
     place-items: center;
     position: relative;
@@ -158,12 +157,18 @@
     display: grid;
     place-items: center;
     padding: 1em 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #fff;
     grid-template-areas: "number-one"
                           "number-two";
 
     a {
+      .infobox {
+        display: grid;
+        text-align: center;
+        place-items: center;
+      }
+
       margin: 0.4em 0;
       .title {
         margin: 0.6em;
@@ -182,7 +187,6 @@
   .footer-section-3 {
     background-color: #000000;
     display: grid;
-    // justify-content: space-around;
     place-items: center;
     padding: 2.2em;
     font-size: 1.3em;

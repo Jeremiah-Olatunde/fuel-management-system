@@ -10,12 +10,92 @@
 
 <template>
   <Gallery>
-    <div class="project-card" v-for="n in 14">
-        <img 
-          :src="`/src/assets/images/chevron/(${n+1}).jpg`" alt=""
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(2).jpg" alt=""
           class="image"
         >
     </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(3).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(4).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(5).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(6).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(7).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(8).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(9).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(10).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(11).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(12).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(13).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(14).jpg" alt=""
+          class="image"
+        >
+    </div>
+    <div class="project-card">
+      <img 
+          src="@/assets/images/chevron/(15).jpg" alt=""
+          class="image"
+        >
+    </div>
+
+    
     <template #data-head-0>take</template>
     <template #data-head-1>a look</template>
     <template #sub-head-0>have a night you will never forget</template>

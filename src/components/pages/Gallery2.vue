@@ -58,7 +58,7 @@
           <ul>
             <li><CalendarIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">April, 2015.</span></li>
             <li><LocationIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Delta state</span></li>
-            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Gas export compressor station</span></li>
+            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Installation of process vessel in OML 147.</span></li>
           </ul>
         </figcaption>
       </figure>
@@ -74,7 +74,7 @@
           <ul>
             <li><CalendarIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">April, 2015.</span></li>
             <li><LocationIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Delta state</span></li>
-            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Crude storage tanks.</span></li>
+            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Installation of Process piping and cable trays in OML 147 flow station.</span></li>
           </ul>
         </figcaption>
       </figure>
@@ -112,6 +112,54 @@
       </figure>
     </div>
 
+    <div class="project-card">
+      <figure>
+        <img 
+          src="@/assets/images/oilfield/(7).jpeg" alt=""
+          class="image"
+        >
+        <figcaption class="image-desc">
+          <ul>
+            <li><CalendarIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">May, 2017</span></li>
+            <li><LocationIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Delta state</span></li>
+            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Gas Export Compressor Station</span></li>
+          </ul>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="project-card">
+      <figure>
+        <img 
+          src="@/assets/images/oilfield/(8).jpeg" alt=""
+          class="image"
+        >
+        <figcaption class="image-desc">
+          <ul>
+            <li><CalendarIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">May, 2017</span></li>
+            <li><LocationIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Delta state</span></li>
+            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Crude Storage tanks</span></li>
+          </ul>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="project-card">
+      <figure>
+        <img 
+          src="@/assets/images/oilfield/(9).jpeg" alt=""
+          class="image"
+        >
+        <figcaption class="image-desc">
+          <ul>
+            <li><CalendarIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">May, 2017</span></li>
+            <li><LocationIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Delta state</span></li>
+            <li><InfoIcon class="icon"/><span class="dash">&mdash;</span><span class="desc">Priming of a storage tank</span></li>
+          </ul>
+        </figcaption>
+      </figure>
+    </div>
+
     <template #data-head-0>namor</template>
     <template #data-head-1>oilfield gallery</template>
     <template #sub-head-0>Gallery of our oilfield services projects</template>
@@ -144,6 +192,8 @@
       }
 
       .image-desc {
+        display: flex;
+        align-items: center;
         padding: 0.5em 0.8em;
         background-color: rgb(239, 239, 239);
         height: 22%;
@@ -180,7 +230,7 @@
   @media screen and (min-width: 700px) {
     .project-card {
       margin: 1em;
-      width: 30%;
+      width: 50%;
       min-width: 100px;
     }    
   }

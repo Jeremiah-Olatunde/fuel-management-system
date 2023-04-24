@@ -23,21 +23,21 @@
 
       <div class="nav-container">
         <ul class="nav-list">
-        <li :class="`nav-item ${activeSection == 'home' ? 'active' : ''}`">
-          <a class="nav-link" href="#home-section" >home</a>
-        </li>
-        <li :class="`nav-item ${activeSection == 'services' ? 'active' : ''}`">
-          <a class="nav-link" href="#services-section" >services</a>
-        </li>
-        <li :class="`nav-item ${activeSection == 'projects' ? 'active' : ''}`">
-          <a class="nav-link" href="#projects-section" >projects</a>
-        </li>
-        <li :class="`nav-item ${activeSection == 'contact' ? 'active' : ''}`">
-          <a class="nav-link" href="#contact-section" >contact</a>
-        </li>
-        <!-- <li :class="`nav-item ${activeSection == 'contact' ? 'active' : ''}`">
-          <a class="nav-link" href="#footer-section" >contact</a>
-        </li> -->
+          <li :class="`nav-item ${activeSection == 'home' ? 'active' : ''}`">
+            <a class="nav-link" href="#home-section" >home</a>
+          </li>
+          <li :class="`nav-item ${activeSection == 'about' ? 'active' : ''}`">
+            <a class="nav-link" href="#about-section" >about</a>
+          </li>
+          <li :class="`nav-item ${activeSection == 'services' ? 'active' : ''}`">
+            <a class="nav-link" href="#services-section" >services</a>
+          </li>
+          <li :class="`nav-item ${activeSection == 'projects' ? 'active' : ''}`">
+            <a class="nav-link" href="#projects-section" >projects</a>
+          </li>
+          <li :class="`nav-item ${activeSection == 'contact' ? 'active' : ''}`">
+            <a class="nav-link" href="#contact-section" >contact</a>
+          </li>
       </ul>
       </div>
 
@@ -55,7 +55,7 @@
     height: var(--navbar-height);
     padding: 2em;
 
-    z-index: 2;
+    z-index: 2000;
     top: 0; left: 0;
     position: fixed;
 

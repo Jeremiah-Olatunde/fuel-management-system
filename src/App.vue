@@ -4,6 +4,7 @@
 
   import Navbar from "@/components/Navbar.vue";
   import Home from "@/components/home/Home.vue";
+  import About from "@/components/about/About.vue";
   import Services from "@/components/services/Services.vue";
   import Contact from "@/components/contact/Contact.vue";
   import Footer from "@/components/footer/Footer.vue";
@@ -24,6 +25,7 @@
     components: { 
       Navbar, 
       Home, 
+      About,
       Services, 
       Projects,
       Contact, 
@@ -73,6 +75,7 @@
       <!-- DESKTOP -->
       <Navbar :active-section="activeSection"/>
       <Home @open="(pageName) => page = pageName"/>
+      <About/>
       <Services/>
       <Projects @open="(pageName) => page = pageName"/>
       <Contact/>
