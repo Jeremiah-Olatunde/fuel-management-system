@@ -18,6 +18,8 @@
   import Construction from "@/components/pages/Construction.vue";
   import Procurement from "@/components/pages/Procurement.vue";
 
+  import Test from "./Test.vue";
+
 
 
   export default {
@@ -38,7 +40,9 @@
       Construction,
       Procurement,
       Footer,
+      Test
     },
+
     mounted: function(){
       let container = document.querySelector(".app-container");
       if(!(container instanceof HTMLElement)) throw new Error("CONTAINER RETRIEVAL ERROR");

@@ -18,12 +18,11 @@
   .home-section {
     display: grid;
     grid-template-rows: min-content auto;
-    margin-bottom: 0;
   }
 
   @media screen and (min-width: 700px) {
     .home-section {
-      margin: 0 8em;
+      margin: 0 8em 0;
       font-size: 1rem;
 
       display: grid;
