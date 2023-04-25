@@ -45,27 +45,23 @@
       <h2>Let's Talk?</h2>
     </div>
 
-    <div class="footer-button">
-      <a class="button"
-          target="_blank" 
-          href="mailto:namortech@yahoo.com">
-          Make an enquiry!
-      </a>
-    </div>
+    <a href="mailto:namortech@yahoo.com" target="_blank">
+      <button class="enquiry button-border">make an enquiry!</button>
+    </a>
   </div>
 
   <div class="footer-section-2">
     <a href="tel:+2348034056935" class="link-one">
       <div class="infobox">
-        <h3 class="title">Lekki Phase II.</h3>
-        <p>+2348034056935</p>
+        <h3 class="title">Lekki Phase II</h3>
+        <p>+234 803 405 6935</p>
       </div>
     </a>
 
     <a href="tel:+2348034056935" class="link-two">
       <div class="infobox">
         <h3 class="title">Port-Harcourt</h3>
-        <p>+2348052763144</p>
+        <p>+234 805 276 3144</p>
       </div>
     </a>
   </div>
@@ -85,12 +81,11 @@
     background-color: #1b1b1b;
     display: grid;
     // justify-content: space-around;
+
     padding: 9em 3em;
     place-items: center;
     position: relative;
-    grid-template-areas: "socials"
-                          "main-header"
-                          "enquiry";
+    grid-template-areas: "socials" "main-header" "enquiry";
 
     .footer-header {
       h2 {
@@ -121,27 +116,16 @@
         }
       }
       .icon {
-        height: 2.5em;
+        height: 2em;
         aspect-ratio: 1;
         fill: #fff
       }
     }
 
-    .footer-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 15em;
-      height: 5em;
-      border: 2px solid darkgoldenrod;
-      background: linear-gradient(to left, #1b1b1b 50%, darkgoldenrod 50%) right;
-      background-size: 200% 100%;
-      transition: all 0.3s ease-out;
-
-      &:hover {
-        background-position: left;
-        a {color: #fff;}
-      }
+    .enquiry {
+      font-size: 1.2em;
+      padding: 1.25em 1em;
+      border: .25em solid var(--accent);
     }
 
     .footer-header {
@@ -164,6 +148,7 @@
                           "number-two";
 
     a {
+      text-align: center;
       margin: 0.4em 0;
       .title {
         margin: 0.6em;

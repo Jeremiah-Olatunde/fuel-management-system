@@ -3,7 +3,7 @@
   <div class="home-title">
     <header class="section-header home-header">
       <h1 class="main-header">leaders in <br> engineering</h1>
-      <h2 class="sub-header">a better nigeria through engineering excellence</h2>
+      <h2 class="sub-header">bettering nigeria through engineering excellence</h2>
     </header>
 
     <p class="home-text text">
@@ -63,7 +63,7 @@
       .home-button-lg {
         display: inline-block;
 
-        font-size: min(2em, 22px);
+        font-size: min(1.75em, 22px);
         padding: 1em 2em;
         border-width: .25em;
         margin: 1em .5em 0 0;

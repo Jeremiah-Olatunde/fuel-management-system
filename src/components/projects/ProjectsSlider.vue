@@ -3,36 +3,44 @@
 
   export default {
     mounted: function(){
+
+      const bullets = document.querySelectorAll(".pagination .bullet");
+
       const swiper = new Swiper('#projects-slider', {
         grabCursor: true,
         spaceBetween: 0,
         slidesPerView: 1,
+        observer: true,
         breakpoints: { 
-          700: { slidesPerView: 3, spaceBetween: 40 } ,
-          // 1500: { slidesPerView: 4, spaceBetween: 40 } 
+          700: { 
+            spaceBetween: 40,
+            slidesPerView: 3,
+          } ,
         },
         on: {
-          init: function(swiper){
-            const idx = swiper.activeIndex;
-            for(let i = idx; i < idx + 3; i++ )
-              swiper.slides[i].style.opacity = "1";
+          resize: function(swiper){
+            const { activeIndex: idx, width: w, slides } = swiper;
+
+            for(let i = 0; i < slides.length; i++) {
+              if(idx <= i && i < idx + (w < 700 ? 1 : 3)) slides[i].style.opacity = "1"; 
+              else slides[i].style.opacity = "0";
+            }
           },
 
           slideChange: function(swiper){
-            const idx = swiper.activeIndex;
+            const { activeIndex: idx, width: w, slides } = swiper;
 
-            swiper.slides[swiper.activeIndex].classList.toggle("active");
-            swiper.slides[swiper.previousIndex].classList.toggle("active");
+            bullets[swiper.previousIndex].classList.toggle("bullet-active");
+            bullets[idx].classList.toggle("bullet-active");
 
-            for(let i = 0; i < swiper.slides.length; i++ ){
-              if(idx <= i && i < idx + 3) swiper.slides[i].style.opacity = "1";
-              else swiper.slides[i].style.opacity = "0";
+
+            for(let i = 0; i < slides.length; i++) {
+              if(idx <= i && i < idx + (w < 700 ? 1 : 3)) slides[i].style.opacity = "1"; 
+              else slides[i].style.opacity = "0";
             }
           },
         }
       });
-
-
     },
 
     emits: ['open']
@@ -40,10 +48,10 @@
 </script>
 
 <template>
-  <div class="projects-slider" id="projects-slider">
+  <div class="projects-slider" id="projects-slider" style="grid-area: slider;">
     <div class="swiper-wrapper projects-wrapper">
       <figure class="swiper-slide project-slide card active" @click="$emit('open', 'chevron')">
-        <img class="image" src="@/assets/images/chevron/facade.jpg" alt="">
+        <img class="image" src="@/assets/images/cozy.jpg" alt="">
         <div class="number"></div>
         <figcaption class="project-header header">
           <h3 class="main-header">home <br> rentals</h3>
@@ -80,37 +88,30 @@
         <figcaption class="project-header header">
           <h3 class="main-header">consultancy <br> </h3>
         </figcaption>
-      </figure>   
-
-
-      <!-- <figure class="swiper-slide project-slide card">
-        <img class="image" src="@/assets/images/sitting.jpg" alt="">
-        <div class="number"></div>
-        <figcaption class="project-header header">
-          <h3 class="main-header">lorem <br> ipsum</h3>
-        </figcaption>
-      </figure>                       -->
+      </figure> 
     </div>
   </div>
 
+  <div class="pagination" style="grid-area: pagination;">
+    <div class="bullet-active bullet"></div>
+    <div class="bullet"></div>
+    <div class="bullet"></div>
+    <div class="bullet"></div>
+    <div class="bullet"></div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-  @import url("swiper/css");
+  @import url("swiper/css/bundle");
 
   .projects-slider {
-    // padding: 6em;
     margin: auto;
-    width: 100%;
     height: 100%;
-    overflow: hidden;
-
-    border: .5em solid black;
-    border-left: 0; border-right: 0;
-    box-shadow: 0 0 10px black;
+    width: calc(100vw - 6em);
+    box-shadow: rgba(0, 0, 0, .7) 0 1rem 3rem;
 
     .projects-wrapper {
-      height: calc(100%);
+      height: 100%;
       counter-reset: number;
 
       .project-slide {
@@ -118,10 +119,10 @@
         transition: opacity .25s ease;
 
         .number::before { 
+          padding: .6em; 
+          font-size: 4em;
           counter-increment: number;
           content: "0" counter(number);
-          font-size: 4em;
-          padding: .6em; 
        }
 
         .project-header {
@@ -129,16 +130,38 @@
           .main-header { font-size: 3em; line-height: 1.25 }
         }
       }
+    }
+  }
 
-      .active .number::before { color: var(--accent-dark); }
+  .pagination {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bullet {
+      height: 1.5em;
+      aspect-ratio: 1;
+      margin: 0 .25em;
+      border-radius: 100%;
+      border: 1px solid black;
+      transition: aspect-ratio .2s ease-out;
+    }
+
+    .bullet-active {
+      aspect-ratio: 1.75;
+      border-radius: 1em;
+      background: black;
     }
   }
 
   @media screen and (min-width: 700px) {
     .projects-slider {
-      padding: 6em;
       border: 0;
       box-shadow: none;
+      padding: 6em 6em 0;
     }
+
+    .pagination { height: 6em; }
   }
 </style>

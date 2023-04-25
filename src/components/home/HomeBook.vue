@@ -1,26 +1,30 @@
 <script lang="ts">
-  export default {
-    emits: ['open']
-  }
+  export default { emits: ['open'] }
 </script>
 
 <template>
   <aside class="home-book">
     <div class="book-card card">
-      <img class="image" src="@/assets/images/chevron/(2).jpg" alt="image of chevron home exterior">
-      <div class="number"></div>
+      <img 
+        class="image" 
+        alt="image of chevron home exterior"
+        src="@/assets/images/chevron/facade.jpg" 
+      >
+
       <header class="header">
         <h2 class="main-header">book<br>a stay in<br> chevron</h2>
 
         <button 
-          class="book-button card-button button-solid-accent-light" 
           @click="$emit('open', 'chevron')"
+          class="book-button card-button button-solid-accent-light" 
         > book! </button>
       </header>
     </div>
 
-    <a class="works-wrapper" href="#projects-section">
-      <button class="main-header works-button">our works</button>
+    <a  class="works-link" href="#projects-section">
+      <button class="works-button">
+        <p class="main-header button-text">projects</p>
+      </button>
     </a>
   </aside>
 </template>
@@ -28,20 +32,14 @@
 <style lang="scss" scoped>
 
   .home-book {
-    .card .image {
-      opacity: 0.7;
-    }
-    padding: 0 2em 2em;
+    padding: 0 0 2em 2em;
 
     display: grid;
-    // grid-column-gap: 3em;
-    grid-template-rows: .95fr .15fr;
-    grid-template-areas: "namor"
-                          "button";
+    grid-column-gap: 3em;
+    grid-template-columns: calc(80% - 1.5em) calc(20% - 1.5em);
 
     .book-card {
-      grid-area: namor;
-      border: 5px solid black;
+      border: .4em solid black;
       box-shadow: 0 0 1em black;
 
       .header {
@@ -51,27 +49,25 @@
       }
     }
 
-    .works-wrapper {
-      grid-area: button;
+    .works-button {
+      cursor: pointer;
+
       display: grid;
       place-items: center;
+      height: 100%; width: 100%;
 
-      writing-mode: vertical-lr;
-      // transform: rotate(180deg);
+      transform: rotate(180deg);
 
       background: var(--accent-dark);  
-      border: .5rem solid black;
+      border: .4em solid black;
       border-left: 0;
-
       box-shadow: 0 0 10px black;
 
-      .works-button {
-        cursor: pointer;
-        padding: .15em;
-        font-size: 3.25em; 
-        letter-spacing: .25em;
+      .button-text {
         color: white;
-        text-align: center;
+        font-size: 3.5em; 
+        letter-spacing: .5em;
+        writing-mode: vertical-rl;
       }
     }
   }
@@ -81,7 +77,7 @@
       padding: 0;
       display: block;
 
-      .works-wrapper { display: none; }
+      .works-link { display: none; }
 
       .book-card {
         margin-left: auto;

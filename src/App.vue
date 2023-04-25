@@ -17,6 +17,8 @@
   import Construction from "@/components/pages/Construction.vue";
   import Procurement from "@/components/pages/Procurement.vue";
 
+  import Test from "./Test.vue";
+
 
 
   export default {
@@ -36,7 +38,9 @@
       Construction,
       Procurement,
       Footer,
+      Test
     },
+
     mounted: function(){
       let container = document.querySelector(".app-container");
       if(!(container instanceof HTMLElement)) throw new Error("CONTAINER RETRIEVAL ERROR");
@@ -48,7 +52,6 @@
             scroll(
               ({y: { progress: p }}) => {
               if(0 < p && p < 1) {
-                console.log("Siuuu");
                 this.activeSection = section.getAttribute("id")!.split("-")[0];
               }
             },
