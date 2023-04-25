@@ -4,7 +4,37 @@
   export default {
     mounted: function(){
 
-      const bullets = document.querySelectorAll(".pagination .bullet");
+      const bullets = Array.from(document.querySelectorAll(".pagination .bullet"));
+      const carousel = document.querySelector(".swiper-wrapper") as HTMLElement;
+      const carousel_item = document.querySelector(".swiper-wrapper .active");
+
+      if (!carousel_item) throw new Error("CAROUSEL ITEM NOT FOUND")
+
+      function index_calc() {
+        return bullets.findIndex(value => value.classList.contains("bullet-active"));
+      }
+
+      bullets.forEach((bullet, index) => {
+        bullet.addEventListener('click', () => {
+          // const previousIndex = bullets.findIndex(value => value.classList.contains("bullet-active"));
+          const previousIndex = index_calc();
+          const {width: w, slides} = swiper;
+          
+          bullets[previousIndex].classList.toggle("bullet-active");
+          bullets[index].classList.toggle("bullet-active");
+          
+          const slide_width = carousel_item.getBoundingClientRect().width
+          carousel.style.transform = `translate3d(${(-index) * slide_width}px, 0, 0)`;
+          
+          for(let i = 0; i < slides.length; i++) {
+              if(index <= i && i < index + (w < 700 ? 1 : 3)) slides[i].style.opacity = "1"; 
+              else slides[i].style.opacity = "0";
+
+              slides[previousIndex].classList.toggle("active");
+              slides[index].classList.toggle("active")
+          }
+        })
+      })
 
       const swiper = new Swiper('#projects-slider', {
         grabCursor: true,
@@ -30,9 +60,8 @@
           slideChange: function(swiper){
             const { activeIndex: idx, width: w, slides } = swiper;
 
-            bullets[swiper.previousIndex].classList.toggle("bullet-active");
+            bullets[index_calc()].classList.toggle("bullet-active");
             bullets[idx].classList.toggle("bullet-active");
-
 
             for(let i = 0; i < slides.length; i++) {
               if(idx <= i && i < idx + (w < 700 ? 1 : 3)) slides[i].style.opacity = "1"; 

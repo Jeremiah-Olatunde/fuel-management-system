@@ -19,31 +19,31 @@
 
     <div class="service-card">
       <div class="number">01</div>
-      <div class="content">procument</div>
+      <div class="content">home rentals</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
 
     <div class="service-card">
       <div class="number">02</div>
-      <div class="content">consultancy</div>
-      <RightArrowIcon class="icon"></RightArrowIcon>
-    </div>
-
-    <div class="service-card">
-      <div class="number">03</div>
-      <div class="content">home Rentals</div>
-      <RightArrowIcon class="icon"></RightArrowIcon>
-    </div>
-
-    <div class="service-card">
-      <div class="number">04</div>
       <div class="content">oilfield services</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
 
     <div class="service-card">
-      <div class="number">05</div>
+      <div class="number">03</div>
       <div class="content">capital construction</div>
+      <RightArrowIcon class="icon"></RightArrowIcon>
+    </div>
+
+    <div class="service-card">
+      <div class="number">04</div>
+      <div class="content">procurement</div>
+      <RightArrowIcon class="icon"></RightArrowIcon>
+    </div>
+
+    <div class="service-card">
+      <div class="number">05</div>
+      <div class="content">consultancy</div>
       <RightArrowIcon class="icon"></RightArrowIcon>
     </div>
   </div>
