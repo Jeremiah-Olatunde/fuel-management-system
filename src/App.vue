@@ -5,7 +5,7 @@
   import DashboardVue from "./components/dashboard/Dashboard.vue";
 
   export default {
-    data: function(){ return { page: "signin" }},
+    data: function(){ return { page: "dashboard" }},
     components: { SignInVue, DashboardVue },
   }
 </script>

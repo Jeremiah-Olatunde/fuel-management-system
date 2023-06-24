@@ -1,3 +1,60 @@
+<script lang="ts">
+  export default {
+    data: function(){ return { 
+      temperature: 0,
+      level: 0,
+    } },
+    computed: {
+      animTemp: function(){
+
+      }
+    },
+    mounted: async function(){
+      console.log("Tanks mounted");
+
+      const bar = document.getElementById("bar");
+      const indicator = document.getElementById("indicator");
+
+      if(!(bar instanceof HTMLCanvasElement)) throw new Error("fuel bar init error");
+      if(!(indicator instanceof HTMLDivElement)) throw new Error("indicator bar init error");
+
+      const { width, height } = getComputedStyle(bar.parentElement!);
+      bar.width = parseFloat(width); 
+      bar.height = parseFloat(height);
+
+      const ctx = bar.getContext("2d");
+      if(!ctx) throw new Error("canvas context Error");
+
+      setInterval(() => {
+        fetch("https://ny3.blynk.cloud/external/api/get?token=iGFs8Sumvs_DD3CC_Za696Y-NcQm-qxx&v0")
+          .then(response => response.json())
+          .then(temperature => this.$data.temperature = temperature)
+          .catch(error => console.log("failed to retrieve temperature"));
+
+        fetch("https://ny3.blynk.cloud/external/api/get?token=iGFs8Sumvs_DD3CC_Za696Y-NcQm-qxx&v1")
+          .then(response => response.json())
+          .then(level => {
+            this.$data.level = level;
+
+            indicator.style.left = `${level}%`;
+            if(level < 2 || 98 < level) indicator.style.opacity = "0";
+            else indicator.style.opacity = "1";
+
+            bar.style.backgroundPosition = `${100 - level}% 0`;
+
+            // const grad = ctx.createLinearGradient(0, 0, parseFloat(width), 0);
+            // grad.addColorStop(level / 100, "darkgoldenrod");
+            // grad.addColorStop(level / 100, "firebrick");   
+
+            // ctx.fillStyle = grad;
+            // ctx.fillRect(0, 0, parseFloat(width), parseFloat(height));              
+          })
+          .catch(error => console.log("failed to retrieve level"));
+      }, 500);
+    }
+  }
+</script>
+
 <template>  
   <div class="tanks" style="grid-area: tanks;">
     <div class="density reading" style="grid-area: density;">
@@ -11,19 +68,17 @@
     <div class="temperature reading" style="grid-area: temperature;">
       <div class="title">temperature</div>
       <div class="value">
-        <div class="number">33&deg;</div>
+        <div class="number">{{ temperature }}&deg;</div>
         <div class="unit">celsius</div>
       </div>
     </div>
 
 
     <div class="fuel-level" style="grid-area: gauge;">
-      <div class="title">fuel level : <span style="color: rgba(184, 134, 11, .75)">75%</span></div>
+      <div class="title">fuel level : <span style="color: rgba(184, 134, 11, .75)">{{ level }}%</span></div>
       <div class="meter">
-        <div class="gauge">
-          <div class="level"></div>
-          <div class="ullage"></div>
-        </div>
+        <canvas class="bar" id="bar"></canvas>
+        <div class="indicator" id="indicator"></div>
       </div>
 
       <ul class="labels">
@@ -41,12 +96,10 @@
 <style lang="scss" scope>
   .tanks {
     padding: 3em;
-    // border: 3px solid black;
-    // box-shadow: 0 0 10px rgba(178, 34, 34, .1);
     background: rgba(178, 34, 34, .1);
 
     display: grid;
-    grid-template-columns: .5fr .5fr;
+    // grid-template-columns: .5fr .5fr;
     grid-template-rows: .35fr auto min-content;
     grid-template-areas: "temperature density" ". ." "gauge gauge";
 
@@ -119,49 +172,35 @@
         .level { background: darkgoldenrod; }
       }     
   
-      .meter {
+      .bar {
         width: 100%;
         height: 100%;
+        border-radius: 50px;
+        background: linear-gradient(90deg, darkgoldenrod 50%, firebrick 50%);
+        background-size: 200%;
+        background-position: 100% 0%;
+        transition: all 1s ease-in-out;
+      }
 
-        .gauge {
-          margin: 1em 0 1em;
-          width: 100%;
+      .meter {
+        border: 4px solid rgba(0, 0, 0, 1);
+        border-radius: 55px;
+        height: 30px;
+        width: 100%;
+      }
 
-          aspect-ratio: 12.5;
-          border: 4px solid black;
-          border-radius: 50px;
+      .indicator {
+        width: 5px;
+        height: 200%;
 
-          &::before {
-            content: "";
-            display: block;
-            height: 250%;
-            width: 5px;
-            background: black;
-            position: absolute;
-            top: 50%; left: 75%;
-            transform: translate(-50%, -50%);
-          }
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 1);
 
-          .level {
-            position: absolute;
-            top: 0; left: 0;
-            background: rgba(184, 134, 11, .75);
-            width: calc(75% - 2.5px);
-            height: 100%;
-            border-top-left-radius: 50px;
-            border-bottom-left-radius: 50px;
-          }
+        position: absolute;
+        top: 50%; left: 0;
+        transform: translate(-50%, -50%);
 
-          .ullage {
-            background: rgb(178, 34, 34, .75);
-            width: calc(25% - 2.5px);
-            height: 100%;
-            position: absolute;
-            top: 0; right: 0;
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;            
-          }
-        }
+        transition: all 1s ease-in-out;          
       }
     }
   }
